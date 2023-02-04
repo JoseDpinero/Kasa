@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 100px;
+}
+.nav{
+    background-color: #E5E5E5;
+    // font-size: 24px;
+    &__link{
+        margin-left: 50px ;
+        text-decoration: none;
+        &-active{
+            text-decoration: underline;
+        }
+    }
+}
