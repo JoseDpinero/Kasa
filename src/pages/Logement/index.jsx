@@ -1,4 +1,9 @@
-function Logement(){
-    return<div>test</div>
+function Logement({houses}){
+    console.log(houses)
+    return (
+    <>
+    <div>test</div>
+    </>
+    )
 }
 export default Logement

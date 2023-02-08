@@ -11,7 +11,7 @@ export default function MyRoutes() {
       <Route path="*" element={<Error />} />
       <Route path="/" element={<Home houses={houses} />} />
       <Route path="/About" element={<About />} />
-      <Route path="/logement/" element={<Logement houses={houses} />} />
+      <Route path="/logement/:houseId" element={<Logement houses={houses} />} />
     </Routes>
   )
 }

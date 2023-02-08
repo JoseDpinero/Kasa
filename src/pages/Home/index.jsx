@@ -3,14 +3,19 @@ import Card from "../../components/Card"
 
 function Home({houses}) {
   return (
-    <div>     
+    <>     
       <Banner page='home' />
       <main className="houses" >
         {
-          houses.map( (house) => <Card key={house.id} house={house}></Card>)
+          houses.map( (house) => <Card key={house.id} 
+          title={house.title}
+          id={house.id}
+          cover={house.cover}
+          >
+          </Card>)
         }
       </main>
-    </div>
+    </>
   )
 }
 
