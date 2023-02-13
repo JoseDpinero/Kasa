@@ -24,11 +24,11 @@
         }
     }
 
-    &__text{
+    &__content{
         max-height: 200px;
         transition:  0.5s ease-in-out;
         padding: 15px;
-        &-width{
+        &-wide{
             max-height: 400px;
         }
     }

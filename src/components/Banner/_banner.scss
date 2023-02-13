@@ -7,12 +7,13 @@
     justify-content: center;
     background-size: cover;
     background-repeat: no-repeat ;
+    background-position: left;
 
     &-home{
-        background-image: url('../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.jpg');
+        background-image: url('../../assets/home_banner.jpg');
     }
     &-about{
-        background-image: url('../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash\ 2.jpg');
+        background-image: url('../../assets/about_banner.jpg');
         filter: brightness(.9);
     }
 

@@ -1,0 +1,16 @@
+.house{
+
+    &__description{
+        display: flex;
+        justify-content: space-between;
+
+        &-column{
+            width: 45%;
+        }
+    }
+}
+.equipement{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
