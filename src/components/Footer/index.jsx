@@ -1,4 +1,5 @@
 import LightLogo from '../../assets/light-logo.svg'
+import './_footer.scss'
 
 function Footer() {
   return (

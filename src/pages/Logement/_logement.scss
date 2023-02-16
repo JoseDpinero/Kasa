@@ -1,4 +1,8 @@
 .house{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
 
     &__description{
         display: flex;
@@ -9,6 +13,16 @@
         }
     }
 }
+
+.owner{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__image{
+        border-radius: 50%;
+    }
+}
+
 .equipement{
     margin: 0;
     list-style: none;

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import defaultPicture from '../../assets/default_house.svg'
+import './_card.scss'
 
 function Card({ title, cover, id }) {
   return (

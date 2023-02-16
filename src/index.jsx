@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import MyRoutes from './utils/Router'
-import './style/style.scss'
+import './style/_base.scss'
 import Favicon from 'react-favicon'
 import icon from './assets/favicon.svg'
 

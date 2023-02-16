@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import arrow from '../../assets/arrow.svg'
+import './_collapse.scss'
 
 function Collapse({ title, children, size }) {
   const [visible, setVisible] = useState(false)

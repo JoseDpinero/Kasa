@@ -1,6 +1,9 @@
 import { Navigate, useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse'
+import Rating from '../../components/Rating/Rating'
 import SlideShow from '../../components/Slideshow'
+import Tags from '../../components/Tags'
+import './_logement.scss'
 
 function Logement({ houses }) {
   const { houseId } = useParams()
@@ -17,34 +20,45 @@ function Logement({ houses }) {
   const tags = house.tags
 
   return (
-    <>
-      <main>
-        <SlideShow pictures={pictures} title={house.title} />
-        <h1>{house.title}</h1>
-        <h2>{house.location} </h2>
-        <p>{host.name}</p>
-        <img src={host.picture} alt="host" />
+    <main>
+      <SlideShow pictures={pictures} title={house.title} />
 
-        <div className="house__description">
-          <div className="house__description-column">
-            <Collapse title="Déscription" size="wide">
-              {house.description}{' '}
-            </Collapse>
-          </div>
-          <div className="house__description-column">
-            <Collapse title="Équipements">
-              <ul className="equipement">
-                {equipments.map((equipment) => (
-                  <li key={equipment} className="equipement__item">
-                    ({equipment})
-                  </li>
-                ))}
-              </ul>
-            </Collapse>
-          </div>
+      <section className="house">
+        <div>
+          <h1>{house.title}</h1>
+          <h2>{house.location} </h2>
+          <Tags tags={tags} />
         </div>
-      </main>
-    </>
+
+        <div className="house__owner">
+          <div className="owner">
+            <p>{host.name}</p>
+            <img src={host.picture} alt="host" className="owner__image" />
+          </div>
+          <Rating rate={house.rating} />
+        </div>
+      </section>
+
+      <section className="house__description">
+        <div className="house__description-column">
+          <Collapse title="Déscription" size="wide">
+            {house.description}
+          </Collapse>
+        </div>
+
+        <div className="house__description-column">
+          <Collapse title="Équipements">
+            <ul className="equipement">
+              {equipments.map((equipment) => (
+                <li key={equipment} className="equipement__item">
+                  ({equipment})
+                </li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
+      </section>
+    </main>
   )
 }
 export default Logement

@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
+import './_home.scss'
 
 function Home({ houses }) {
   return (

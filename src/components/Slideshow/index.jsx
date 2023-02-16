@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import arrow from '../../assets/arrow.svg'
+import './_slideshow.scss'
 
 function SlideShow({ pictures, title }) {
   const [indexImage, setIndexImage] = useState(0)

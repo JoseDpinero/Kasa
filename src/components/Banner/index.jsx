@@ -1,3 +1,5 @@
+import './_banner.scss'
+
 function Banner({ page }) {
   return (
     <div className={'banner banner-' + page}>
