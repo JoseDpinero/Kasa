@@ -1,13 +1,17 @@
+@import '../../utils/mixin';
+
 .gallery{
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 
        &__slide{
         object-fit: cover;
         width: 100%;
         height: 28vw;
-        border-radius: 25px;
+        min-height: 255px;
+        @include border-25;
     }
 }
 .button{
@@ -27,5 +31,17 @@
 
     &__arrow{
         width:90px;
+        }
+    }
+    .index{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        &__button{
+            border: none;
+            background-color: transparent;
+            font-size: 3em;
+            color: white;
+          
         }
     }

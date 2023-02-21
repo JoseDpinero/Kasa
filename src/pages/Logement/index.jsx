@@ -24,15 +24,15 @@ function Logement({ houses }) {
       <SlideShow pictures={pictures} title={house.title} />
 
       <section className="house">
-        <div>
-          <h1>{house.title}</h1>
-          <h2>{house.location} </h2>
+        <div className="house-wrapper">
+          <h1 className="house__title">{house.title}</h1>
+          <h2 className="house__location">{house.location} </h2>
           <Tags tags={tags} />
         </div>
 
         <div className="house__owner">
           <div className="owner">
-            <p>{host.name}</p>
+            <p className="owner__name">{host.name}</p>
             <img src={host.picture} alt="host" className="owner__image" />
           </div>
           <Rating rate={house.rating} />
@@ -41,13 +41,13 @@ function Logement({ houses }) {
 
       <section className="house__description">
         <div className="house__description-column">
-          <Collapse title="Déscription" size="wide">
+          <Collapse title="Déscription" logement>
             {house.description}
           </Collapse>
         </div>
 
         <div className="house__description-column">
-          <Collapse title="Équipements">
+          <Collapse title="Équipements" logement>
             <ul className="equipement">
               {equipments.map((equipment) => (
                 <li key={equipment} className="equipement__item">

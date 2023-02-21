@@ -31,6 +31,27 @@ function SlideShow({ pictures, title }) {
           >
             <img alt="arrow right" src={arrow} className="button__arrow" />
           </button>
+          <div className="index">
+            {pictures.map((slide, slideIndex) =>
+              indexImage === slideIndex ? (
+                <button
+                  onClick={() => setIndexImage(slideIndex)}
+                  key={slideIndex}
+                  className="index__button index__button-active "
+                >
+                  &#9679;
+                </button>
+              ) : (
+                <button
+                  onClick={() => setIndexImage(slideIndex)}
+                  key={slideIndex}
+                  className="index__button"
+                >
+                  &#9675;
+                </button>
+              )
+            )}
+          </div>
         </>
       )}
     </div>

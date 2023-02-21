@@ -1,8 +1,10 @@
+@import '../../utils/mixin';
+
 .banner{
     width: 90%;
     margin: 30px auto;
     height: 223px;
-    border-radius: 25px;
+    @include border-25;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +14,7 @@
 
     &-home{
         background-image: url('../../assets/home_banner.jpg');
+        margin-bottom: 40px;
     }
     &-about{
         background-image: url('../../assets/about_banner.jpg');
@@ -26,7 +29,7 @@
         color: white;
         width: 100%;
         height: 100%;
-        border-radius: 25px;
+        @include border-25;
         backdrop-filter: brightness(.7);
 
     }

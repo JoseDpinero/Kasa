@@ -1,15 +1,33 @@
+@import '../../utils/mixin';
+
 .error{
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1{
+    text-align: center;
+    @include small_screen{
+        width: 70%;
+    }
+    &__title{
         font-size: 288px;
+        font-weight: 700;
         margin: 0;
+        @include small_screen{
+            font-size: 96px;
+            margin-top: 195px;
+        }
     }
-    h2{
+    &__subtitle{
         font-size: 36px;
+        @include small_screen{
+            font-size: 18px;
+        }
     }
-    a{
-        margin: 180px 0;
+    &__link{
+        margin: 150px 0;
+        font-size: 18px;
+        @include small_screen{
+            margin: 130px 0;
+        }
     }
 }

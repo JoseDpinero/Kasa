@@ -1,0 +1,16 @@
+@mixin small_screen {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin border-5{
+    border-radius: 5px;
+}
+@mixin border-25{
+    border-radius: 10px;
+    overflow: hidden;
+}
+@mixin border-10{
+    border-radius: 10px;
+    overflow: hidden;
+}

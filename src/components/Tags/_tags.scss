@@ -1,14 +1,30 @@
+@import '../../utils/variable';
+@import '../../utils/mixin';
+
 .list{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 0;
+    margin-top: 20px;
+    @include small_screen{
+        margin: 0;
+    }
 
     &__tag{
     color: white;
-    background-color: #FF6060;
-    border-radius: 10px;
+    background-color: $color-primary;
+    @include border-10;  
     padding: 3px 25px ;
-    font-size: 14px;
+    font-size: 14px;    
+    align-self: center;
+    text-align: center;
+    min-width: 84px;
+    box-sizing: border-box;
+    @include small_screen{
+        font-size: 10px;
+        padding: 3px 20px ;
+        }
     }
 }

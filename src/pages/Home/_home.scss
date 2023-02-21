@@ -1,5 +1,16 @@
-.houses {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+@import '../../utils/variable';
+@import '../../utils/mixin';
+
+.houses{
+    width: 90%;
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 60px;
+        row-gap: 50px;
+        padding: 56px 50px;
+        background-color: $color-secondary;
+        @include border-25; 
+    };
 }

@@ -1,11 +1,12 @@
+@import '../../utils/mixin';
 .card {
     position: relative;
     display: flex;
     width: 340px;
     height: 340px;
-    margin:10px;
-    border-radius: 15px;
-    overflow: hidden;
+    margin: auto;
+    @include border-10;
+    
     &::before{
         content: '';
         position: absolute;
@@ -27,6 +28,7 @@
         color: white;
         bottom: 0;
         left: 20px;
+        width: 75%;
     }
 
 }

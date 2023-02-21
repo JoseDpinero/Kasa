@@ -1,37 +1,59 @@
+@import '../../utils/mixin';
+@import '../../utils/variable';
 
 .collapse{
-    margin-bottom: 30px;    
-    overflow: hidden;
-    border-radius: 5px;    
+    @include border-10;  
+    margin-bottom: 30px;
     font-size: 24px;
-    background-color: #F7F7F7;
+    background-color: $color-secondary;
+    @include small_screen{
+        @include border-5; 
+        margin-bottom: 20px;
+    }
+    
+    &-logement{
+        font-size: 18px;
+    }
 
     &__button{
+        @include border-10;  
         width: 100%;
         text-align: left;
-        font-size: 24px;
+        font-size: inherit;
         display: flex;
         justify-content: space-between;
-        background-color: #FF6060;
-        border-radius: 5px;
+        background-color: $color-primary;
         border: none;
         color: white;
+        align-items: center;
+        @include small_screen{
+            font-size: 13px;
+            padding: 5px 11px;
+            @include border-5; 
+        }
     }
+    
     &__arrow{
+        @include small_screen{
+            width: 15px;
+        }
         &-revert{
-
+            @include small_screen{
+                width: 15px;
+            }
             transform: rotate(180deg);
         }
     }
 
     &__content{
-        max-height: 200px;
+        max-height: 305px;
         transition:  0.5s ease-in-out;
         padding: 15px;
-        &-wide{
-            max-height: 400px;
+        @include small_screen{
+            font-size: 12px;
         }
     }
+
 .hidden{
         max-height: 0;
         padding: 0;

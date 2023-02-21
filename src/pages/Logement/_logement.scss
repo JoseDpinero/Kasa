@@ -1,25 +1,69 @@
+@import '../../utils/mixin';
+
 .house{
     
     display: flex;
     justify-content: space-between;
-    margin: 40px auto;
+    margin: 30px auto;
+    @include small_screen{
+        flex-direction: column;
+        margin: 15px 0;
+
+        &__owner{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+    }
+
+    &__title{
+        font-size: 36px;
+        margin: 0;
+        @include small_screen{
+            font-size: 18px;
+        }
+    }
+
+    &__location{
+        font-size: 18px;
+        margin: 0;
+        @include small_screen{
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    }
 
     &__description{
         display: flex;
         justify-content: space-between;
-
+        @include small_screen{
+            flex-direction: column;
+        }
         &-column{
             width: 45%;
+            @include small_screen{
+                width: auto;
+            }
         }
     }
 }
 
 .owner{
     display: flex;
-    align-items: center;
     gap: 10px;
+    align-items: flex-start;
+    &__name{
+        margin: 0;
+        font-size: 12px;
+    }
     &__image{
         border-radius: 50%;
+        width: 64px;
+        @include small_screen{
+            width: 32px;
+        }
     }
 }
 

@@ -1,14 +1,28 @@
+@import '../../utils/mixin';
+
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:  40px auto ;
+    margin:  auto ;
+    margin-top: 40px;
+    margin-bottom: 20px;
     width: 90%;
+    @include small_screen{
+        &__logo{
+            width: 145px;
+        }
+    }
 }
 .nav{
-    background-color: #E5E5E5;
     &__link{
         margin-left: 50px ;
+        font-size: 24px;
+        @include small_screen{
+            margin-left: 10px ;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
         text-decoration: none;
         &-active{
             text-decoration: underline;

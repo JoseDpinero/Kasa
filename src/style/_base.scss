@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@400;700&display=swap');
+@import '../utils/variable';
+
 *{
-    color: #FF6060;
+    color: $color-primary;
     font-family: Montserrat;
+    font-weight: 500;
 }
 body{
     margin: 0;

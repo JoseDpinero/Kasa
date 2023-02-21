@@ -12,12 +12,14 @@ function Rating({ rate }) {
             key={rangeElem + 'full star'}
             src={full_star}
             alt={'étoiles pleine'}
+            className="rating__star"
           />
         ) : (
           <img
             key={rangeElem + 'stars left'}
             src={empty_star}
             alt={'étoiles vide'}
+            className="rating__star"
           />
         )
       )}
