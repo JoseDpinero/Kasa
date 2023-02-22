@@ -9,6 +9,7 @@
         gap: 5px;
         margin: 0;
     }
+    
     &__star{
         @include small_screen{
             width: 15px;

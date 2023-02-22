@@ -20,6 +20,7 @@
     &__title{
         font-size: 36px;
         margin: 0;
+        width: 75%;
         @include small_screen{
             font-size: 18px;
         }
@@ -54,10 +55,16 @@
     display: flex;
     gap: 10px;
     align-items: flex-start;
+    justify-content: flex-end;
+    
     &__name{
         margin: 0;
-        font-size: 12px;
+        font-size: 18px;
+        @include small_screen{
+            font-size: 12px;
+        }
     }
+
     &__image{
         border-radius: 50%;
         width: 64px;

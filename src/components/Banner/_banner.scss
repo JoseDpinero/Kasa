@@ -21,16 +21,30 @@
         filter: brightness(.9);
     }
 
-    p{
+    &__text{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 48px; 
-        color: white;
         width: 100%;
         height: 100%;
-        @include border-25;
         backdrop-filter: brightness(.7);
+        @include small_screen{
+            padding-left: 15px;
+            justify-content: flex-start;
+        }
+        &-br{
+            display: none;
+            @include small_screen{
+                display: inline;
+            }
+        }
 
+        p{            
+        font-size: 48px; 
+        color: white;
+            @include small_screen{
+                font-size: 24px;
+            }
+        }
     }
 }

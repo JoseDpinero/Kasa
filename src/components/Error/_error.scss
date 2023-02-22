@@ -8,6 +8,7 @@
     @include small_screen{
         width: 70%;
     }
+
     &__title{
         font-size: 288px;
         font-weight: 700;
@@ -17,12 +18,14 @@
             margin-top: 195px;
         }
     }
+
     &__subtitle{
         font-size: 36px;
         @include small_screen{
             font-size: 18px;
         }
     }
+    
     &__link{
         margin: 150px 0;
         font-size: 18px;

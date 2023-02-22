@@ -18,7 +18,6 @@
     position: absolute;
     border: none;
     background-color: transparent;
-    width: 90px;
     &-left{
         transform: rotate(270deg);
         left: 0;
@@ -30,18 +29,25 @@
         }
 
     &__arrow{
-        width:90px;
+        width:85px;
+        @include small_screen{
+            width: 20px;
+        }
+
         }
     }
+    
     .index{
         display: flex;
         position: absolute;
-        bottom: 0;
+        bottom: 0; 
+        @include small_screen{
+            display: none;
+        }
         &__button{
             border: none;
             background-color: transparent;
             font-size: 3em;
             color: white;
-          
         }
     }
